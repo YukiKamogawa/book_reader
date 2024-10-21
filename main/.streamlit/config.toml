@@ -1,0 +1,11 @@
+[server]
+headless = true
+enableCORS = false
+
+[theme]
+base="dark"
+primaryColor="#12F3B0"
+font="sans serif"
+
+[layout]
+wide = true
