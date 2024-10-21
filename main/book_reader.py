@@ -29,6 +29,9 @@ uploaded_file = st.file_uploader("PDFファイルをアップロードしてく�
 # メモを読み込む
 memos = load_memos()
 
+if 'reading_direction' not in st.session_state:
+    st.session_state.reading_direction = 'left_to_right'
+
 if uploaded_file is not None:
     pdf_document = fitz.open(stream=uploaded_file.read())
     total_pages = pdf_document.page_count
